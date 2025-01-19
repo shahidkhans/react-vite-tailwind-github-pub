@@ -5,8 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SYSSOFT.IN</title>
-    <script type="module" crossorigin src="/assets/index-B0_lWnvf.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ygJqmUoY.css">
+
+    <script>
+      (function() {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect.substring(location.origin.length));
+        }
+      })();
+    </script>
+
+    <script type="module" crossorigin src="/assets/index-SszYdA3u.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DMSIjvUo.css">
   </head>
   <body>
     <div id="root"></div>
